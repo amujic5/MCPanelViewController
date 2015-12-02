@@ -388,6 +388,8 @@ const static NSString *MCPanelViewGestureAnimationDirectionKey = @"MCPanelViewGe
 		self.imageView.image = image;
 		self.imageView.frame = CGRectMake(_direction == MCPanelAnimationDirectionLeft ? 0 : _imageViewContainer.bounds.size.width - width, 0, image.size.width * MCPanelViewUndersampling, image.size.height * MCPanelViewUndersampling);
 	}
+    self.imageView.image = nil;
+    self.imageView.backgroundColor = [UIColor clearColor];
 }
 
 #pragma mark - Gestures
